@@ -8,7 +8,6 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <div>
-      <Nav />
       <h1>hello gangilos</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
@@ -25,7 +24,6 @@ export default function Home() {
       <Link href="/gangilos">
         <a>See Gangilo's Listing</a>
       </Link>
-      <Footer />
     </div>
   );
 }
