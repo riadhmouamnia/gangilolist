@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
 import styles from "../styles/Home.module.css";
@@ -21,6 +22,9 @@ export default function Home() {
         cum blanditiis ea dolorum, aliquam similique. Blanditiis repellat et
         quos!
       </p>
+      <Link href="/gangilos">
+        <a>See Gangilo's Listing</a>
+      </Link>
       <Footer />
     </div>
   );
