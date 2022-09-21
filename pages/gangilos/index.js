@@ -1,6 +1,16 @@
 import Head from "next/head";
+import styles from "../../styles/gangilos.module.css";
 
-const Gangilos = () => {
+export const getStaticProps = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users/");
+  const data = await res.json();
+
+  return {
+    props: { gangilos: data },
+  };
+};
+
+const Gangilos = ({ gangilos }) => {
   return (
     <>
       <Head>
@@ -9,6 +19,13 @@ const Gangilos = () => {
       </Head>
       <div>
         <h1>All gangilos</h1>
+        {gangilos.map((gang) => (
+          <div key={gang.id}>
+            <a className={styles.single}>
+              <h3>{gang.name}</h3>
+            </a>
+          </div>
+        ))}
       </div>
     </>
   );
