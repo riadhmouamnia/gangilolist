@@ -26,7 +26,7 @@ export default function Home() {
           </p>
         </div>
         <Link href="/gangilos">
-          <a className={styles.btn}>See Gang's Listing</a>
+          <a className={styles.btn}>See Gang Listing</a>
         </Link>
       </div>
     </>
